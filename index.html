@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book-Spoiler</title>
+	<!-- <link rel="icon" href="Img/img2.svg" type="image/png"> -->
+	<link rel="stylesheet" href="styles/styles.css">
+	<script src="https://kit.fontawesome.com/f0ac6751a1.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+	<!-- <login e cadastro> e <foto do perfil>  -->
+		<nav class="header-padrao" id="header-padrao">
+			<a class="link-pag" id="link-pag"><img class="logo-icon" id="logo-icon" src="img/img2.svg"/></a>
+			<span><a id="link-timeline" href="">Timeline</a></span>
+			<div class="itens-padrao" id="itens-padrao">				
+				<span><a id="link-login" href="">Login</a></span>
+				<span><a id="link-cadastro" href="">Cadastre-se</a></span>				
+			</div>			
+		</nav>
+
+		<nav class="header-logado" id="header-logado" style="display: none;">	
+			<img class="logo-icon" id="logo-icon" src="img/img2.svg" />
+			<ul class="itens-logado" id="itens-logado">
+				<li>Timeline</li>
+				<li><img class="img-perfil" id="img-perfil" src="img/img2.svg"/><span class="nome-usuario" id="nome-usuario">Allan Christian</span></li>
+			</ul>
+		</nav>				
+	</header>
+
+
+	<main>		
+		<aside class="barra-lateral" id="barra-lateral">
+			<ul>
+				<li>Pagina inicial</li>
+				<li>Meu Perfil</li>
+				<li>Novo Post</li>
+				<li>Contribuir</li>
+			</ul>
+		</aside>
+		<div class="Timeline" id="Timeline">
+			<section class="header-main" id="header-main">
+				<h1>Ultimos posts</h1>			
+				<input class="barra-pesquisa"  id="barra-pesquisa" type="text"></input>				
+			</section>
+			<section class="posts" id="posts">
+				<ul>
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                </div>
+		            </li>
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                </div>
+		            </li>					
+
+				</ul>
+			</section>
+		</div>				
+	</main>
+</body>
+</html>

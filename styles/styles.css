@@ -1,0 +1,90 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header{
+	display: flex;	
+	flex-direction: row;
+	height: auto;
+	margin-bottom: 6%;
+}
+
+header a{
+  color: inherit; /* Remove a cor padrão dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  background: none; /* Remove qualquer fundo aplicado */
+  border: none; /* Remove qualquer borda aplicada */
+  padding: 0; /* Remove qualquer padding aplicado */
+  margin: 0; /* Remove qualquer margem aplicada */
+  font-weight: normal; /* Remove qualquer alteração de peso da fonte */
+  
+}
+
+header .header-padrao{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 1%;
+	padding-bottom: 1%;	
+	background-color: coral;
+	position: fixed;
+	height: 10%;
+	font-size: 22px;
+}
+
+
+header .header-padrao .itens-padrao {	
+	position: relative;
+	left: 2%;
+	display: inline;
+}
+
+header .header-padrao .logo-icon{
+	height: 50%;
+	width: 50%;
+}
+
+header .header-padrao .itens-padrao #link-login{
+	margin-right: 10px;
+}
+
+aside{
+
+}
+
+main{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	border-style: solid;
+}
+
+main .barra-lateral{	
+	display: grid;
+	grid-auto-rows: 1fr;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+	border-style: solid;	
+	margin-left: 5%;
+	width: 30%;
+	gap: 150px;	
+}
+
+main .barra-lateral ul{
+	list-style-type: none;
+}
+
+
+
+
+
+
+
+
