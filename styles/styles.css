@@ -5,10 +5,9 @@
 }
 
 
-	header .menu-mobile{
-		display: none;
-	
-	}
+header .menu-mobile{
+	display: none;	
+}
 
 header{
 	display: flex;	
@@ -16,6 +15,7 @@ header{
 	height: auto;
 	margin-bottom: 6%;
 	z-index: 100;
+	background-color: #fa9f43;
 }
 
 header a{
@@ -39,7 +39,8 @@ header .header-padrao{
 	padding-right: 10%;
 	padding-top: 1%;
 	padding-bottom: 1%;	
-	background-color: coral;
+	background-color: #1B1924;
+	color: #DCD9C6;
 	position: fixed;
 	height: 10%;
 	font-size: 22px;
@@ -67,12 +68,14 @@ aside{
 
 main{
 	display: grid;
-	grid-template-columns: 20% 1fr;
+	grid-template-columns: 10% 1fr;
 	grid-template-rows: 1fr;
 	border-style: solid;
-	border-color: blue;e
+	border-color: blue;
 	/*align-items: center;
 	justify-content: center;*/
+	background-color: #74593D;
+	color: #f9fad2;
 	
 }
 
@@ -101,9 +104,17 @@ main .barra-lateral{
 	border-style: solid;		
 	width: 100%;
 	position: sticky;
-	height: 30%;
+	height: 15%;
 	margin-top: 10%;
-	top: 10%;	
+	top: 25%;	
+
+	font-family: "Gupter", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+
+ 	background-color: #1B1924;
+	color: #DCD9C6;
 }
 
 main .barra-lateral ul{
@@ -113,6 +124,7 @@ main .barra-lateral ul{
 	height: auto;
 	position: relative;
 	top: -10%;
+
 }
 
 
@@ -187,6 +199,8 @@ footer{
 	border-style: solid;
 	border-color: yellow;
 	padding: 2%;
+	background-color: #ac4147;
+	color: #262324;
 }
 
 
@@ -269,5 +283,8 @@ footer{
 
 }
 
+
+
+/*https://visme.co/blog/pt-br/combinacoes-de-cores/*/
 
 
