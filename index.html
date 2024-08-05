@@ -29,7 +29,35 @@
 				<li>Timeline</li>
 				<li><img class="img-perfil" id="img-perfil" src="img/img2.svg"/><span class="nome-usuario" id="nome-usuario">Allan Christian</span></li>
 			</ul>
-		</nav>				
+		</nav>		
+
+		<div class="menu-mobile" id="menu-mobile">
+            <div class="logo-mobile" id="logo-mobile">
+                <h1><a href="https://imagenday.vercel.app" style="text-decoration: none; color: black;">Book Spoiler</a></h1> 
+                <img class="img-principal" id="img-principal" src="Img/img2.svg"/>
+                <i class="fa-solid fa-bars" id="button-mobile"></i>
+            </div>
+            
+            <nav class="itens" id="itens" style="">
+                <ul>
+                    <li><a href="#inicio">Login</a></li>
+                    <li><a href="#cards-img">Cadastro</a></li>
+                    <li><a href="https://github.com/nasa/apod-api">Relevantes</a></li>                
+                    <i class="fa-solid fa-bars" id="button-itens"></i>
+                </ul>
+            </nav>            
+        
+            <nav class="itens-logado" id="itens-logado" style="display: none;">
+                <ul style="display: none;">
+                    <li><a href="#inicio">Meu Perfil</a></li>
+                    <li><a href="#cards-img">Novo Post</a></li>
+                    <li><a href="https://github.com/nasa/apod-api">Relevantes</a></li>                
+                    <i class="fa-solid fa-bars" id="button-mobile"></i>
+                </ul>
+            </nav>
+        </div>	
+
+
 	</header>
 
 
@@ -39,13 +67,16 @@
 				<li>Pagina inicial</li>
 				<li>Meu Perfil</li>
 				<li>Novo Post</li>
-				<li>Contribuir</li>
+				<li>Relevantes</li>
 			</ul>
 		</aside>
 		<div class="Timeline" id="Timeline">
 			<section class="header-main" id="header-main">
 				<h1>Ultimos posts</h1>			
-				<input class="barra-pesquisa"  id="barra-pesquisa" type="text"></input>				
+				<div class="pesquisa-post" id="pesquisa-post">
+					<input class="barra-pesquisa"  id="barra-pesquisa" type="text"></input>	
+					<input class="button-pesquisar" id="button-pesquisar" type="button"><i class="fa-solid fa-magnifying-glass"></i></input>
+				</div>	
 			</section>
 			<section class="posts" id="posts">
 				<ul>
@@ -56,6 +87,7 @@
 		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
 		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
 		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
 		                </div>
 		            </li>
 
@@ -66,12 +98,88 @@
 		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
 		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
 		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
 		                </div>
-		            </li>					
+		            </li>			
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+		                </div>
+		            </li>	
+
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+		                </div>
+		            </li>	
+
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+		                </div>
+		            </li>	
+
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+		                </div>
+		            </li>
+
+		            <li class="post">		                
+		                <img class="img-post" id="img-post" src="img/img2.svg" alt="Imagem 5">
+		                <div class="dados-post" id="dados-post">
+		                    <span id="titulo-post" class="titulo-post" style="">Titulo Post</span><br />  
+		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><br />
+		                    <a class="link-button-6" id="link-button-6"><button id="button-6">Veja mais!</button></a><br />
+		                    <span class="data-img-6" id="data-img-6" style="margin-left: 15px;">sábado, 27 de julho de 2024</span><br/>
+		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+		                </div>
+		            </li>		            		            		            		            		            		
 
 				</ul>
 			</section>
 		</div>				
 	</main>
+	<footer>
+		<div class="barra-lateral-footer" id="barra-lateral-footer">
+			<ul>
+				<li>Sobre nós</li>
+				<li>Contribuir</li>
+				<li>Linkedin</li>
+			</ul>
+		</div>
+		<p class="footer-copy">© 2024 BookSpoiler. Todos os direitos reservados.</p>
+		<div class="links-footer" id="links-footer">
+			<i class="fa-brands fa-github"></i>
+			<i class="fa-solid fa-envelope"></i>
+		</div>
+	</footer>
+
+	<script src="script/jquery.js"></script>
+	<script src="script/menu-mobile.js"></script>
 </body>
 </html>
