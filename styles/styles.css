@@ -4,11 +4,18 @@
 	box-sizing: border-box;
 }
 
+
+	header .menu-mobile{
+		display: none;
+	
+	}
+
 header{
 	display: flex;	
 	flex-direction: row;
 	height: auto;
 	margin-bottom: 6%;
+	z-index: 100;
 }
 
 header a{
@@ -60,31 +67,207 @@ aside{
 
 main{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 20% 1fr;
 	grid-template-rows: 1fr;
 	border-style: solid;
+	border-color: blue;e
+	/*align-items: center;
+	justify-content: center;*/
+	
 }
+
+
+main .header-main{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-style: solid;
+	position: sticky;
+	top: 10%;	
+	width: 100%;
+	padding: 2%;	
+	margin-bottom: 5%;
+	margin-top: 5%;	
+	grid-area: 1 1 1 1;
+	background-color: beige;
+}
+
 
 main .barra-lateral{	
 	display: grid;
-	grid-auto-rows: 1fr;
-	flex-direction: column;
+	grid-auto-rows: 1fr;	
 	justify-content: center;
 	align-items: center;	
-	border-style: solid;	
-	margin-left: 5%;
-	width: 30%;
-	gap: 150px;	
+	border-style: solid;		
+	width: 100%;
+	position: sticky;
+	height: 30%;
+	margin-top: 10%;
+	top: 10%;	
 }
 
 main .barra-lateral ul{
 	list-style-type: none;
+	display: grid;
+	gap: 40%;
+	height: auto;
+	position: relative;
+	top: -10%;
 }
 
 
+main .posts{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5%;
+	margin-bottom: 5%;
+	border-style: solid;
+	border-color: red;	
+}
+
+main .posts ul {
+	list-style-type: none;
+}
+
+main .posts ul li{
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	gap: 2%;
+	box-sizing: border-box;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-style: solid;
+	margin-bottom: 3%;
+	
+}
+
+main .posts ul li .img-post{
+	border-style: solid;
+	width: 100%;
+	height: 100%;
+}
+
+main .posts ul li .dados-post{
+	border-style: solid;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main .posts ul li .dados-post .descricao-post{
+	margin-left: 3%;
+}
 
 
+main .posts ul li .dados-post button{
+		  background-color: #ef3353; /* Cor de fundo */
+	    color: white; /* Cor do texto */
+	    border: none; /* Remover borda */
+	    padding: 10px 20px; /* Espaçamento interno */
+	    text-align: center; /* Alinhamento do texto */
+	    text-decoration: none; /* Remover sublinhado */
+	    display: inline-block; /* Exibir como um bloco */
+	    font-size: 18px; /* Tamanho da fonte */
+	    width: 100%;	    
+	    cursor: pointer; /* Cursor ao passar */
+	    border-radius: 20px; /* Raio da borda para arredondar */
+	    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+	    box-shadow: 0px 0px 0px 2px;
+	    margin: auto 4px;
+	    margin-top: 10px;	
+	    margin-bottom: 0px;	
+}
 
+footer{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-style: solid;
+	border-color: yellow;
+	padding: 2%;
+}
+
+
+@media (max-width: 767px){
+	main .barra-lateral{
+		display: none;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+	}
+
+	main .header-main{
+		position: relative;
+		top: inherit;
+	}
+
+	header {
+/*		display: flex;
+		justify-items: center;
+		align-items: center;
+		justify-content: center;
+		align-content: center;*/
+	}
+
+
+	header .header-padrao, .header-logado{
+		display: none;		
+	}
+
+	header .menu-mobile{
+		display: inline-flex;
+		flex-direction: row;
+		width: 100%;
+		height: auto;
+		max-height: 45px;
+	}
+
+	header .menu-mobile .logo-mobile{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 10%;
+	}
+
+	header .menu-mobile .logo-mobile img{		
+		width: 50px;
+		height: 50px;
+	}
+
+	header .menu-mobile .itens{
+		display: none;
+		flex-direction: row;		
+		align-items: center;
+		justify-content: center;
+		border-style: solid;
+		width: 100%;
+		height: 155%;		
+		font-size: 26px;
+	}
+
+	header .menu-mobile .itens ul{
+		display: flex;
+		flex-direction: row;		
+		gap: 12px;		
+		list-style-type: none;
+	}
+
+	footer{
+		box-sizing: border-box;
+		gap: 12px;
+	}
+
+	footer ul{
+		list-style-type: none;
+	}
+
+}
 
 
 
