@@ -1,0 +1,13 @@
+$(function(){
+    $('.barra-lateral ul li').hover(
+        function() {
+        // Mostrar o elemento relacionado
+            $(this).find('.text-pag').css('display', 'inline');
+                console.log('ok');
+            },
+            function() {
+                // Ocultar o elemento relacionado
+                $(this).find('.text-pag').css('display', 'none');
+            }
+    );
+});
