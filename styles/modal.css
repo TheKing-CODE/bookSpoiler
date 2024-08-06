@@ -1,0 +1,10 @@
+main .barra-lateral .text-pag{	
+	z-index: 100;
+	position: absolute;	
+	background-color: #ef3353;
+	padding: 10px;
+	font-size: 20px;
+	margin-left: 50%;
+	margin-top: -50%;
+	box-shadow: 1px 1px 10px;
+}
