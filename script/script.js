@@ -1,14 +1,30 @@
-
-
+/*
 $('.barra-lateral ul li').click(function(){
     let filho = $(this).find('span');    
-})
+})*/
 
 $('.header-padrao .link-timeline').click(function(){    
     let nome = $(this).text();
     console.log(nome);
+
     event.preventDefault();
 })
+
+$('.header-padrao .itens-padrao #link-login').click(function(){    
+    let nome = $(this).text();
+    let url = 'Pages/'+nome+'.html';
+    console.log(url);
+/*    carregarPage(url);
+    event.preventDefault();*/
+})
+
+
+$('.header-padrao .itens-padrao #link-cadastro').click(function(){    
+    let nome = $(this).text();
+    console.log(nome);
+    event.preventDefault();
+})
+
 
     /*let filho = $(this).find('a');   
     let url = filho.text();
@@ -33,7 +49,7 @@ function carregarPage(linkPag){
                //$(data).appendTo('#container').fadeIn();
                $('#posts').css('display','none');
                $('#containe').css('display','grid');
-               /*$('#posts').html(data);*/
+               $('#containe').append(data);
                /*console.log('codigo');   */  
           }
      })
