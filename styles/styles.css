@@ -15,6 +15,7 @@ header{
 	background-color: #2b879e; /*;#1B1924*/
 	color: #f9fad2;
 	height: 100px;
+
 }
 
 header a{
@@ -25,6 +26,8 @@ header a{
   padding: 0; /* Remove qualquer padding aplicado */
   margin: 0; /* Remove qualquer margem aplicada */
   font-weight: normal; /* Remove qualquer alteração de peso da fonte */
+  
+  
 }
 
 header .header-padrao{
@@ -58,9 +61,8 @@ main{
 	display: grid;
 	grid-template-columns: 7% 1fr;
 	grid-template-rows: 1fr;
-	/*align-items: center;
-	justify-content: center;*/
 	background-color: #f9fad2;
+	min-height: 100vh;
 }
 
 
@@ -79,6 +81,8 @@ main .header-main{
 	grid-area: 1 1 1 1;
 	background-color: #f9fad2;
 	color: #442432;
+
+	border-style: solid;
 }
 
 main .header-main .barra-pesquisa{
@@ -110,11 +114,12 @@ main .barra-lateral{
 	border-style: solid;		
 	width: 100%;
 	position: sticky;
+	min-height: 100vh;
 	height: 15%;
 	margin-top: 10%;
 	top: 25%;	
 
-	font-family: "Gupter", serif;
+		font-family: "Gupter", serif;
   	font-weight: 700;
   	font-style: normal;
   	font-size: 28px;
@@ -136,13 +141,25 @@ main .barra-lateral .text-pag{
 	display: none;
 }
 
+main .containe{
+	border-style: solid;
+	border-color: bisque;
+
+	display: none;
+	justify-content: center;
+	align-content: center;
+	min-height: 78vh;
+	min-width: 100%;
+	position: relative;
+	top:12%;
+}
+
 
 main .posts{
 	width: 100%;
 	box-sizing: border-box;
 	padding: 5%;
-	margin-bottom: 5%;
-	
+	margin-bottom: 5%;	
 }
 
 main .posts ul {
