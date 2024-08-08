@@ -1,9 +1,19 @@
 
 
 $('.barra-lateral ul li').click(function(){
-     /*let link =  $(this).find('.a').attr();*/
-     carregarPage('Pages/login.html');
+    let filho = $(this).find('span');    
 })
+
+$('.header-padrao .link-timeline').click(function(){    
+    let nome = $(this).text();
+    console.log(nome);
+    event.preventDefault();
+})
+
+    /*let filho = $(this).find('a');   
+    let url = filho.text();
+    event.preventDefault();
+    console.log(url);*/
 
 
 function carregarPage(linkPag){
@@ -21,9 +31,10 @@ function carregarPage(linkPag){
           'success':function(data){
                //$('#container').html(data);
                //$(data).appendTo('#container').fadeIn();
-               $('#posts').html('');
-               $('#posts').html(data);
-               console.log('codigo');     
+               $('#posts').css('display','none');
+               $('#containe').css('display','grid');
+               /*$('#posts').html(data);*/
+               /*console.log('codigo');   */  
           }
      })
 }
