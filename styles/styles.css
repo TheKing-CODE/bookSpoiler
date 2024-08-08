@@ -82,7 +82,7 @@ main .header-main{
 	background-color: #f9fad2;
 	color: #442432;
 
-	border-style: solid;
+	
 }
 
 main .header-main .barra-pesquisa{
@@ -142,9 +142,6 @@ main .barra-lateral .text-pag{
 }
 
 main .containe{
-	border-style: solid;
-	border-color: bisque;
-
 	display: none;
 	justify-content: center;
 	align-content: center;

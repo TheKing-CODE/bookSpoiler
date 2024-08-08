@@ -1,41 +1,42 @@
-/*
-$('.barra-lateral ul li').click(function(){
-    let filho = $(this).find('span');    
-})*/
 
-$('.header-padrao .link-timeline').click(function(){    
-    let nome = $(this).text();
-    console.log(nome);
-
+//header
+$('.header-padrao #link-timeline').click(function(){    
+    let url = '/index.html';
     event.preventDefault();
+    ocultaElemento('containe');
+    $('#posts').css('display','grid');
+    $('#header-main').css('display','flex');
 })
 
 $('.header-padrao .itens-padrao #link-login').click(function(){    
-    let nome = $(this).text();
-    let url = 'Pages/'+nome+'.html';
-    console.log(url);
-/*    carregarPage(url);
-    event.preventDefault();*/
-})
-
-
-$('.header-padrao .itens-padrao #link-cadastro').click(function(){    
-    let nome = $(this).text();
-    console.log(nome);
+    let url = 'Pages/'+$(this).text()+'.html';
     event.preventDefault();
+
+    ocultaElemento("posts");
+    ocultaElemento("header-main");
+    //ocultaElemento("cadastro")
+    carregarPage(url);
 })
+//header
 
-
-    /*let filho = $(this).find('a');   
-    let url = filho.text();
-    event.preventDefault();
-    console.log(url);*/
-
+$('.barra-lateral ul li').click(
+    function() {
+    // Mostrar o elemento relacionado
+       let Elemento = $(this).find('.text-pag').text();
+       switch (Elemento) {
+        case 'Página Inicial':
+            $('.header-padrao #link-timeline').click();
+            break;
+        default:
+            break;
+       }
+    }
+);
 
 function carregarPage(linkPag){
-     $.ajax({
+    $.ajax({
           'beforeSend': function(){
-               console.log("Estamos chamando o beforesend!");
+            console.log("Estamos chamando o beforesend!");
           },
           'timeout': 10000,
           'url':linkPag,
@@ -47,10 +48,14 @@ function carregarPage(linkPag){
           'success':function(data){
                //$('#container').html(data);
                //$(data).appendTo('#container').fadeIn();
-               $('#posts').css('display','none');
+               //$('#posts').css('display','none');
+               $('#containe').html('');
                $('#containe').css('display','grid');
-               $('#containe').append(data);
-               /*console.log('codigo');   */  
+               $('#containe').append(data); 
           }
      })
+}
+
+function ocultaElemento(Elemento){
+    $('#'+Elemento).css('display','none');
 }
