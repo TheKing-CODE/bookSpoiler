@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles-pages/styles_criarPost.css">
+	<title>Criar Post</title>
+</head>
+<body>
+	<main>
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+    	<h1 style="text-align: center; margin-bottom: 2%;">Criar nova publicação</h1>
+        <label for="titulo-post">Titulo</label>
+        <input type="text" id="titulo-post" name="titulo-post" placeholder="Titulo para o post" required>
+        <br/>
+        <label for="resumo-post">Resumo</label>
+        <textarea type="mensagem" id="resumo-post" name="resumo-post" rows="4" cols="50" placeholder="O que está pensando?" required></textarea>
+		<br/>
+        <label for="telefone" style="text-align: left;">Imagem</label>
+        <input type="file" id="file" name="file" style="padding-bottom: 2%;">		
+        <div class="buttons" id="buttons">
+	        <button type="submit" style="background-color: ;">Enviar</button>
+	        <button type="submit">Visualizar</button>
+	        <button class="limpar-button" id="limpar-button" style="background-color: #f2163b;">Limpar</button>
+	        <button class="cancelar-button" id="cancelar-button" style="background-color: #f2163b;">Cancelar</button>
+    	</div>
+    </form>
+  	</main>
+</body>
+</html>

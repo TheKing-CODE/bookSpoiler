@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	
+}
+
+main{
+	height: auto;
+	display: grid;
+	box-sizing: border-box;
+	padding: 10px;	
+	background-color: #f9fad2;
+}
+
+form{
+	display: flex;
+	flex-direction: column;	
+	width: 96%;
+	min-height: 924px;
+
+	height: auto;
+
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 3%;
+
+	border-style: solid;	
+	box-sizing: border-box;
+	border-width: 2px;
+	border-radius: 20px;
+	
+	background-color: #f9f9f9;
+
+}
+
+input[type="text"], textarea {
+  background-color: black; /* Cor de fundo */
+  color: white;
+  padding: 10px;
+  padding-left: 25px;
+  border-style: none;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+textarea{
+	resize: none;
+	height: 50%;
+}
+
+label{
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.buttons{		
+	display: flex;
+	flex-direction: column;		
+	width: 75%;
+	gap: 10px;
+	margin: auto;
+}
+
+.buttons button{
+		background-color: #ef3353; /* Cor de fundo */
+	    color: white; /* Cor do texto */
+	    border: none; /* Remover borda */
+	    padding: 10px 20px; /* Espaçamento interno */
+	    text-align: center; /* Alinhamento do texto */
+	    text-decoration: none; /* Remover sublinhado */
+	    display: inline-block; /* Exibir como um bloco */
+	    font-size: 18px; /* Tamanho da fonte */
+	    width: 450px;	    
+	    cursor: pointer; /* Cursor ao passar */
+	    border-radius: 20px; /* Raio da borda para arredondar */
+	    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+	    box-shadow: 0px 0px 0px 2px;
+	    /*margin: auto 4px;
+	    margin-top: 10px;	
+	    margin-bottom: 0px;	*/
+	    margin: auto;
+}
