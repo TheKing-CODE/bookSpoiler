@@ -59,7 +59,7 @@ header .header-padrao .itens-padrao #link-login{
 
 main{
 	display: grid;
-	grid-template-columns: 7% 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	background-color: #f9fad2;
 	min-height: 100vh;
@@ -117,7 +117,7 @@ main .barra-lateral{
 	min-height: 100vh;
 	height: 15%;
 	margin-top: 10%;
-	top: 25%;	
+	top: 0%;	
 
 		font-family: "Gupter", serif;
   	font-weight: 700;
