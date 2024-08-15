@@ -1,5 +1,5 @@
 
-//header
+//header -padrão
 $('.header-padrao #link-timeline').click(function(){    
     let url = '/index.html';
     event.preventDefault();
@@ -9,7 +9,7 @@ $('.header-padrao #link-timeline').click(function(){
 })
 
 $('.header-padrao .itens-padrao #link-login').click(function(){    
-    let url = 'Pages/'+$(this).text()+'.html';
+    let url = '/Pages/'+$(this).text()+'.html';
     event.preventDefault();
 
     ocultaElemento("posts");
@@ -18,6 +18,10 @@ $('.header-padrao .itens-padrao #link-login').click(function(){
     carregarPage(url);
 })
 //header
+
+//header mobile 
+
+//header mobile
 
 $('.barra-lateral ul li').click(
     function() {

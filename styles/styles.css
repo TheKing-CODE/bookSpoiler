@@ -26,8 +26,6 @@ header a{
   padding: 0; /* Remove qualquer padding aplicado */
   margin: 0; /* Remove qualquer margem aplicada */
   font-weight: normal; /* Remove qualquer alteração de peso da fonte */
-  
-  
 }
 
 header .header-padrao{
@@ -59,7 +57,7 @@ header .header-padrao .itens-padrao #link-login{
 
 main{
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 5% 1fr;
 	grid-template-rows: 1fr;
 	background-color: #f9fad2;
 	min-height: 100vh;
@@ -73,7 +71,7 @@ main .header-main{
 	align-items: center;
 	justify-items: center;
 	position: sticky;
-	max-width: 1114px;
+	max-width: 1160px;
 	box-sizing: border-box;
 	margin: auto;
 	margin-bottom: -5%;
@@ -82,7 +80,7 @@ main .header-main{
 	background-color: #f9fad2;
 	color: #442432;
 
-	
+	top: 0px;
 }
 
 main .header-main .barra-pesquisa{
@@ -102,7 +100,8 @@ main .header-main .barra-pesquisa{
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     background-size: 20px 20px; /* Tamanho da imagem*/
 		position: relative;
-		left: -30%;
+		left: -20%;
+		
 }
 
 
@@ -119,7 +118,7 @@ main .barra-lateral{
 	margin-top: 10%;
 	top: 0%;	
 
-		font-family: "Gupter", serif;
+	font-family: "Gupter", serif;
   	font-weight: 700;
   	font-style: normal;
   	font-size: 28px;
