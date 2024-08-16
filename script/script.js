@@ -4,7 +4,7 @@ $('.header-padrao #link-timeline').click(function(){
     let url = '/index.html';
     event.preventDefault();
     ocultaElemento('containe');
-    $('#posts').css('display','grid');
+    $('#Timeline').css('display','grid');
     $('#header-main').css('display','flex');
 })
 
@@ -17,11 +17,6 @@ $('.header-padrao .itens-padrao #link-login').click(function(){
     //ocultaElemento("cadastro")
     carregarPage(url);
 })
-//header
-
-//header mobile 
-
-//header mobile
 
 $('.barra-lateral ul li').click(
     function() {
@@ -36,6 +31,8 @@ $('.barra-lateral ul li').click(
        }
     }
 );
+
+$('.posts ul li .link-').click(function(){})
 
 function carregarPage(linkPag){
     $.ajax({
@@ -53,9 +50,10 @@ function carregarPage(linkPag){
                //$('#container').html(data);
                //$(data).appendTo('#container').fadeIn();
                //$('#posts').css('display','none');
-               $('#containe').html('');
-               $('#containe').css('display','grid');
-               $('#containe').append(data); 
+               $('#Timeline').css('display', 'none');
+                   /*$('#containe').html('');
+                   $('#containe').css('display','grid');
+                   $('#containe').append(data); */
           }
      })
 }
