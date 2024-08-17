@@ -140,14 +140,19 @@ main .barra-lateral .text-pag{
 	display: none;
 }
 
+main .Timeline{
+	
+}
+
 main .containe{
 	display: none;
 	justify-content: center;
 	align-content: center;
 	min-height: 78vh;
 	min-width: 100%;
-	position: relative;
-	top:12%;
+	
+
+	border-style: solid;
 }
 
 

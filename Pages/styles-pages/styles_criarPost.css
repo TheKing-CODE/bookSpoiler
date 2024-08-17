@@ -4,39 +4,35 @@
 }
 
 body{
-	
+	min-height: 100vh;
+/*	border-style: solid;	
+	border-color: darkred;*/
 }
 
 main{
+	display: flex;
+	width: 100%;
 	height: auto;
-	display: grid;
-	box-sizing: border-box;
-	padding: 10px;	
-	background-color: #f9fad2;
+/*	border-style: solid;
+	border-color: yellow;*/
 }
 
 form{
 	display: flex;
-	flex-direction: column;	
-	width: 96%;
-	min-height: 924px;
-
-	height: auto;
-
-	margin-left: 2%;
-	margin-right: 2%;
-	padding: 3%;
-
-	border-style: solid;	
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
 	box-sizing: border-box;
-	border-width: 2px;
-	border-radius: 20px;
-	
+	padding: 5px;
+	width: 100%;
+	height: auto;
 	background-color: #f9f9f9;
-
+	
+	/*border-style: solid;*/
 }
 
 input[type="text"], textarea {
+	width: 50%;	
   background-color: black; /* Cor de fundo */
   color: white;
   padding: 10px;
@@ -48,7 +44,7 @@ input[type="text"], textarea {
 
 textarea{
 	resize: none;
-	height: 50%;
+	height: 250px;
 }
 
 label{
@@ -58,11 +54,12 @@ label{
 }
 
 .buttons{		
-	display: flex;
-	flex-direction: column;		
-	width: 75%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 50%;
 	gap: 10px;
 	margin: auto;
+
 }
 
 .buttons button{
@@ -74,7 +71,7 @@ label{
 	    text-decoration: none; /* Remover sublinhado */
 	    display: inline-block; /* Exibir como um bloco */
 	    font-size: 18px; /* Tamanho da fonte */
-	    width: 650px;	    
+	    width: 100%;	    
 	    cursor: pointer; /* Cursor ao passar */
 	    border-radius: 20px; /* Raio da borda para arredondar */
 	    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
@@ -92,14 +89,9 @@ button:hover{
 
 @media (max-width: 767px){
 	main{
-		margin: 0;
-		padding: 0;
 	}
 
 	form{		
-		min-height: 100vh;
-		height: 100vh;
-		margin: 0;
 	}
 
 	.buttons button{

@@ -75,10 +75,10 @@ main .containe{
 	display: none;
 	justify-content: center;
 	align-content: center;
-	min-height: 78vh;
+	min-height: 100vh;
 	min-width: 100%;
-	position: relative;
-	top:12%;
+	height: auto;
+	width: auto;
 }
 
 main .entrada-pag{
