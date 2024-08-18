@@ -15,4 +15,18 @@ $(function(){
 		/*console.log("Testando");*/
 	});	
 
+	$('.menu-mobile #link-timeline').click(function(){    
+		event.preventDefault();
+		ocultaElemento('containe');
+		mostrarElemento('Timeline');
+	})
+
+	function ocultaElemento(Elemento){
+		$('#'+Elemento).hide();
+	}
+	
+	function mostrarElemento(Elemento){
+		$('#'+Elemento).show();
+	};
+
 })
