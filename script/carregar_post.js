@@ -2,30 +2,22 @@ $(function(){
 
 
 $('section ul li .link-button').click(function(){
-	carregarPage();
+     $('#Timeline').hide();
+     $('#containe').css('display', 'block');
+	carregarPage('pages/post.html', 'containe');
 });
 
 
-function carregarPage(){
-    $.ajax({
-          'beforeSend': function(){
-            console.log("Estamos chamando o beforesend!");
-          },
-          'timeout': 10000,
-          'url':'/pages/post.html',
-          'error':function(jqXHR,textStatus,errorThrown){
-          if(jqXHR.statusText == 'Not Found'){
-               console.log("Página não encontrada.");
-               }
-          },
-          'success':function(data){
-               $('#Timeline').css('display','none');
-               $('#containe').html('');
-               $('#containe').css('display','grid').css('width','100%').css('height', 'auto');
-               $('#containe').append(data); 
-          }
+function carregarPage(url, targetElementId) {
+     $.get('pages/post.html', function(data) {
+         // Insere o conteúdo HTML obtido na página
+         $('#containe' ).html('');
+         $('#containe' ).html(data);
      })
-}
+     .fail(function() {
+         console.error("Erro ao carregar o HTML.");
+     });
+ }
 
 
 

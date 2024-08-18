@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 }
 
-
 header .menu-mobile{
 	display: none;	
 }
@@ -15,7 +14,6 @@ header{
 	background-color: #2b879e; /*;#1B1924*/
 	color: #f9fad2;
 	height: 100px;
-
 }
 
 header a{
@@ -101,6 +99,8 @@ main .header-main .barra-pesquisa{
     background-size: 20px 20px; /* Tamanho da imagem*/
 		position: relative;
 		left: -20%;
+
+	
 		
 }
 
@@ -134,6 +134,13 @@ main .barra-lateral ul{
 	height: auto;
 	position: relative;
 	top: -10%;
+
+	cursor: pointer;
+}
+
+
+main .barra-lateral ul li{
+	cursor: pointer;
 }
 
 main .barra-lateral .text-pag{
@@ -146,13 +153,10 @@ main .Timeline{
 
 main .containe{
 	display: none;
-	justify-content: center;
+	/*justify-content: center;
 	align-content: center;
 	min-height: 78vh;
-	min-width: 100%;
-	
-
-	border-style: solid;
+	min-width: 100%;*/
 }
 
 
