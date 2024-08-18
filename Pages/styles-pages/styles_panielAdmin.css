@@ -73,12 +73,6 @@ main .barra-lateral .text-pag{
 
 main .containe{
 	display: none;
-	justify-content: center;
-	align-content: center;
-	min-height: 100vh;
-	min-width: 100%;
-	height: auto;
-	width: auto;
 }
 
 main .entrada-pag{
