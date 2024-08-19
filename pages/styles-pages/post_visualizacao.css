@@ -1,0 +1,108 @@
+ *{
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+ main {
+	display: grid;
+	grid-template-columns: auto;
+	justify-items: center;
+	align-items: center;
+	gap: 15px;
+	box-sizing: border-box;
+	padding: 20px;	
+	background-color: #f9fad2;
+}
+
+ main .titulo-post{
+	box-sizing: border-box;
+	padding: 5px;
+	
+	border-radius: 20px;
+	font-size: 40px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+ main .campo-img img{
+	width: 420px;
+	height: 420px;
+	max-width: 100%;
+	max-height: 100%;
+	box-shadow: 1px 1px 5px;
+}
+
+ main .descricao{
+	
+	font-family: "Playwrite AR", cursive;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 22px;
+	padding: 10px;
+	background-color: rgb(249, 250, 170, 1.0);
+	box-shadow: 1px 1px 5px;
+
+	border-radius: 10px;
+}
+
+ main .data-post{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+ main .campo-autor{
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	font-size: 22px;
+
+	
+}
+
+main .campo-autor a{
+	text-decoration: none;
+	font-size: 26px;
+	color: #ef3353; /* Cor de fundo */;		
+}
+
+main .campo-autor a:hover{
+	font-size: 28px;
+}
+
+ main .campo-autor a i{
+	
+}
+
+main .campo-buttons{	
+	font-size: 22px;
+}
+
+ main .campo-buttons span{	
+	cursor: pointer;
+}
+
+ main .campo-buttons #icon-curti{
+	display: inherit;
+}
+
+main .modal button{
+			background-color: #ef3353; /* Cor de fundo */
+	    color: white; /* Cor do texto */
+	    border: none; /* Remover borda */
+	    padding: 10px 20px; /* Espaçamento interno */
+	    text-align: center; /* Alinhamento do texto */
+	    text-decoration: none; /* Remover sublinhado */
+	    display: inline-block; /* Exibir como um bloco */
+	    font-size: 18px; /* Tamanho da fonte */
+	    
+	    cursor: pointer; /* Cursor ao passar */
+	    border-radius: 20px; /* Raio da borda para arredondar */
+	    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+	    box-shadow: 0px 0px 0px 2px;
+	    margin: auto 4px;
+	    margin-top: 10px;	
+	    margin-bottom: 0px;	
+}
+
+

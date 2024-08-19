@@ -52,7 +52,7 @@
 
 }
 
-.containe .buttons button{
+.containe .buttons input[type="button"]{
 		background-color: #ef3353; /* Cor de fundo */
 	    color: white; /* Cor do texto */
 	    border: none; /* Remover borda */

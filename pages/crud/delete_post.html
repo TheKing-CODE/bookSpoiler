@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book-Spoiler</title>
+</head>
+
+<body>
+    <main>
+        <div class="containe-excluir" id="ex1">
+            <style>
+                .containe-excluir{
+                    display: grid;
+                    grid-template-columns: auto;
+                    gap: 10px;
+                    width: 50%;
+                    height: auto;
+                    padding: 10px;
+                    border-style: solid;
+                }
+            
+                .containe-excluir input{
+                    padding-left: 5%;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: darkgray;
+                    color: white;
+                    font-weight: bolder;
+                }
+            
+                .containe-excluir button{
+                    font-weight: bold;
+                    padding: 10px;
+                    border-radius: 20px;
+                    border: 0px;
+                    background-color: #2f7003; /* Cor de fundo */
+                    color: white; /* Cor do texto */
+                }
+            </style>
+            <label style="text-align: center; font-size: 22px;">Qual post deseja deleta?</label>
+            <input class="id-post" placeholder="Digite o ID" type="text"/>
+            <button class="excluir" id="excluir">Excluir</button>
+            <button class="excluir" id="excluir" rel="modal:close" style="background-color: #ef3353;">Cancelar</button>
+        </div>
+    </main>
+
+	<script src="/script/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+</body>
+</html>

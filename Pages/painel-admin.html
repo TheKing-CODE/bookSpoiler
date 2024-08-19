@@ -47,12 +47,56 @@
                 <h2>O que deseja para hoje?</h2><br/>
                 <li><a href="#">Criar um novo post...</a></li>
                 <li><a href="#">Alterar um post..</a>.</li>
-                <li><a href="#">Deleta um post...</a></li>    
+                <li><a href="#ex1" rel="modal:open" style=""> Deleta um post...</a></li>    
             </ul>
         </div>
+	<div class="modal" id="ex1" style="">
+	 <div class="containe-excluir" id="ex1">
+            <style>
+                .containe-excluir{
+                    display: grid;
+                    grid-template-columns: auto;
+                    gap: 10px;
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                    margin: auto;
+                }
+            
+                .containe-excluir input{
+                    padding-left: 5%;
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: darkgray;
+                    color: white;
+                    font-weight: bolder;
+                }
+            
+                .containe-excluir button{
+                    display: block;
+                    width: 100%;
+                    font-weight: bold;
+                    padding: 10px;
+                    border-radius: 20px;
+                    border: 0px;
+                    background-color: #2f7003; /* Cor de fundo */
+                    color: white; /* Cor do texto */
+                    cursor: pointer;
+                }
+            </style>
+            <label style="text-align: center; font-size: 22px;">Qual post deseja deleta?</label>
+            <input class="id-post" placeholder="Digite o ID" type="text"/>
+            <button class="excluir" id="excluir">Excluir</button>
+            <a href="#" rel="modal:close" style="text-decoration: none;"><button class="excluir" id="excluir" style="background-color: #ef3353;">Cancelar</button></a>
+        </div>	 			
+	</div>
     </main>
     <script src="script_pages/jquery.js"></script>
-	<script src="script_pages/js_painel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="crud/script/criar_post/criar_post.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<script src="script_pages/js_painel.js"></script>    
+
+    
 </body>
 </html>
