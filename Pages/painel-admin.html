@@ -22,6 +22,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <header>
         <nav>
@@ -30,12 +31,13 @@
         </nav>    
     </header>
     <main>
+        
         <aside class="barra-lateral" id="barra-lateral">
 			<ul>
 				<li><i class="fa-solid fa-house" id="icon-pag-inicial"></i><span class="text-pag" id="text-pag-inicial" style="">Página Inicial</span></li>
 				<li><i class="fa-solid fa-newspaper" id="icon-pag-NvPost"></i><span class="text-pag" id="text-NvPost" style="">Novo Post</span></li>
                 <li><i class="fa-solid fa-pen-to-square"></i><span class="text-pag" id="text-perfil" style="">Edita Post</span></li>
-				<li><i class="fa-solid fa-delete-left"></i><span class="text-pag" id="text-relevantes" style="">Excluir Post</span></li>
+				<li><a href="#ex1" rel="modal:open" style="text-decoration: none; color: aliceblue;"><i class="fa-solid fa-delete-left"></i><span class="text-pag" id="text-relevantes" style="">Excluir Post</span></a></li>
 			</ul>
 		</aside>
         <div class="containe" id="containe"></div>
@@ -51,5 +53,6 @@
     </main>
     <script src="script_pages/jquery.js"></script>
 	<script src="script_pages/js_painel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 </body>
 </html>
