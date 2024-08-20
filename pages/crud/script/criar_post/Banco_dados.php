@@ -18,7 +18,7 @@ class Banco_Dados {
             
             if(is_array($dados)){
                 // SQL de inserção com marcadores de posição
-                $query = 'INSERT INTO posts (Titulo, Descricao, Data, Link, urlimg) VALUES (:Titulo, :Descricao, :Data, :Link, :Url_img)';
+                $query = 'INSERT INTO posts (Titulo, Descricao, Data, Link, UrlImg) VALUES (:Titulo, :Descricao, :Data, :Link, :Url_img)';
 
                 // Preparar a consulta
                 $stmt = $this->pdo->prepare($query);
@@ -26,9 +26,9 @@ class Banco_Dados {
                 // Definir os valores
                 $Titulo = $dados['titulo'];
                 $Descricao = $dados['resumo'];
-                $Data = date("m.d.y");
+                $Data = $dados['data'];
                 $Link = 'google.com';
-                $Url_img = $dados['data'];
+                $Url_img = $dados['imagen_url'];
 
                 // Vincular os parâmetros
                 $stmt->bindParam(':Titulo', $Titulo);
@@ -124,12 +124,4 @@ class Banco_Dados {
 }
 
 // Exemplo de uso da classe
-$dsn = 'mysql:host=localhost;dbname=bookspoiler';
-$usuario = 'root';
-$senha = '';
 
-$banco = new Banco_Dados($dsn, $usuario, $senha);
-$banco->InserirDados();
-$banco->ConsultarDados();
-$banco->AtualizarDados(2, 'Nova Descricao');
-$banco->DeletarDados(1);

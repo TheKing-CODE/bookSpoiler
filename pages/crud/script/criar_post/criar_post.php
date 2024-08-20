@@ -16,34 +16,28 @@ function processarFormulario() {
         }
 
         // Validar se um arquivo foi enviado
-        if ($arquivo && $arquivo['error'] === UPLOAD_ERR_OK) {
-            // Definir o diretório para salvar a imagem
-            $diretorio = '/img/';
-            $arquivoDestino = $diretorio . basename($arquivo['name']);
-
-            // Verificar se o diretório existe, se não, criar
-            if (!is_dir($diretorio)) {
-                mkdir($diretorio, 0755, true);
+        if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {    
+            $nomeArquivo = $_FILES['file']['name'];
+            $destino = __DIR__ . "/img/$nomeArquivo";
+        
+            // Verificar e criar diretório se não existir
+            $dir = __DIR__ . "/img";
+            if (!is_dir($dir)) {
+                mkdir($dir, 0755, true);
             }
-
-            // Verificar se o arquivo já existe
-            if (file_exists($arquivoDestino)) {
-                echo "O arquivo já existe.";
-                return;
-            }
-
+        
             // Mover o arquivo para o diretório de destino
-            if (move_uploaded_file($arquivo['tmp_name'], $arquivoDestino)) {
-                echo "Arquivo enviado com sucesso.";
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $destino)) {
+                echo "<p>Imagem enviada com sucesso: $nomeArquivo</p>";
             } else {
-                echo "Erro ao enviar o arquivo.";
+                echo "<p>Erro ao mover o arquivo para o diretório de destino.</p>";
             }
         } else {
-            echo "Nenhum arquivo enviado ou erro no upload do arquivo.";
+            echo "<p>Erro no upload da imagem.</p>";
         }
 
         $dataAtual = date('Y-m-d');
-        $dados = array('titulo' => $titulo , 'resumo' => $resumo, 'imagen_url' => $arquivoDestino, 'data' => $dataAtual);
+        $dados = array('titulo' => $titulo , 'resumo' => $resumo, 'imagen_url' => '/img/'.$nomeArquivo, 'data' => $dataAtual);
 
         return $dados;
     }
@@ -51,12 +45,13 @@ function processarFormulario() {
 
 $dados_form = processarFormulario();
 
-// Exemplo de uso da classe
+//Exemplo de uso da classe
 $dsn = 'mysql:host=localhost;dbname=bookspoiler';
 $usuario = 'root';
 $senha = '';
 
 $banco = new Banco_Dados($dsn, $usuario, $senha);
 $banco->InserirDados($dados_form);
+
 
 ?>

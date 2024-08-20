@@ -1,6 +1,6 @@
 
 	<main>
-	    <form method="post" enctype="multipart/form-data" id="form-dados">
+	    <form action="/pages/crud/script/criar_post/criar_post.php" method="post" enctype="multipart/form-data" id="form-dados">
 	    	<h1 style="text-align: center; margin-bottom: 2%;">Criar nova publicação</h1>
 	        <label for="titulo-post">Titulo</label>
 	        <input type="text" id="titulo-post" name="titulo-post" placeholder="Titulo para o post" style="width: 50%" >
@@ -11,7 +11,7 @@
 	        <label for="imagem" style="text-align: left;">Imagem</label>
 	        <input type="file" id="file" name="file" style="padding-bottom: 2%;">		
 	        <div class="buttons" id="buttons">
-		        <input type="button" class="enviar-button" style="background-color: #388E3C;" value="Enviar">
+		        <input type="submit" class="enviar-button" style="background-color: #388E3C;" value="Enviar">
 		        <input type="button" class="Visualizar-button" id="Visualizar-button" style="background-color: #388E3C;" value="Visualizar">
 		        <input type="button" class="limpar-button" id="limpar-button" style="background-color: #f2163b;" value="Limpar">
 		        <input type="button" class="cancelar-button" id="cancelar-button" style="background-color: #f2163b;" value="Cancelar">
