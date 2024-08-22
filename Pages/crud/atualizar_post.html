@@ -1,8 +1,10 @@
 	<main>
 	    <form action="/pages/crud/script/criar_post/criar_post.php" method="post" enctype="multipart/form-data" id="form-dados">
-	    	<h1 style="text-align: center; margin-bottom: 2%;">Criar nova publicação</h1>
+	    	<h1 style="text-align: center; margin-bottom: 2%;">Atualizar Post</h1>
+	        <label for="id-post">ID Post</label>
+	        <input type="text" id="id-post" name="id-post" placeholder="Digite o ID do post que deseja atualizar" style="width: 100%" ><br/>
 	        <label for="titulo-post">Titulo</label>
-	        <input type="text" id="titulo-post" name="titulo-post" placeholder="Titulo para o post" style="width: 50%" >
+	        <input type="text" id="titulo-post" name="titulo-post" placeholder="Titulo para o post" style="width: 100%" >
 	        <br/>
 	        <label for="resumo-post">Resumo</label>
 	        <textarea type="mensagem" id="resumo-post" name="resumo-post" rows="4" cols="50" placeholder="O que está pensando?"></textarea>
@@ -10,11 +12,11 @@
 	        <label for="imagem" style="text-align: left;">Imagem</label>
 	        <input type="file" id="file" name="file" style="padding-bottom: 2%;">		
 	        <div class="buttons" id="buttons">
-		        <input type="submit" class="enviar-button" style="background-color: #388E3C;" value="Atualizar">
+		        <input type="submit" class="enviar-button" id="enviar-button" style="background-color: #388E3C;" value="Atualizar">
 		        <input type="button" class="Visualizar-button" id="Visualizar-button" style="background-color: #388E3C;" value="Visualizar">
 		        <input type="button" class="limpar-button" id="limpar-button" style="background-color: #f2163b;" value="Limpar">
-		        <input type="button" class="cancelar-button" id="cancelar-button" style="background-color: #f2163b;" value="Cancelar">
+		        <a href="#" rel="modal:close" style="text-decoration: none;"><input type="button" class="cancelar-button" id="cancelar-button" style="background-color: #f2163b;" value="Cancelar"></a>
 	    	</div>
 	    </form>
-	    <script src="/Pages/crud/script/criar_post/atualizar.js"></script>	    
+	    <script src="/Pages/script_pages/atualizar_post.js"></script>	    
   	</main>

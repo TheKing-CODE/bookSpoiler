@@ -16,7 +16,7 @@ $(function(){
 
 function criarPost(){
     ocultaElemento('entrada-pag');
-    carregarPage('/pages/crud/criar_publicacao.html', 'containe');
+    carregarPage('/Pages/crud/criar_publicacao.html', 'containe');
     $('#containe').css('display', 'block');
 }
 

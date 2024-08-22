@@ -88,15 +88,16 @@ class Banco_Dados {
         }
     }
 
-    public function AtualizarDados($id, $novaDescricao = '', $novoTitulo = '') {
+    public function AtualizarDados($id, $novoTitulo = '', $novaDescricao = '', $novaUrlImg = '') {
         try {
-            if(!empty(trim($novoTitulo)) && !empty(trim($novaDescricao))){
-                $sql = "UPDATE posts SET Descricao = :descricao, Titulo = :titulo WHERE id = :id";
+            if(!empty(trim($novoTitulo)) && !empty(trim($novaDescricao)) && !empty(trim($novaUrlImg))){
+                $sql = "UPDATE posts SET Descricao = :descricao, Titulo = :titulo, UrlImg = :UrlImg WHERE id = :id";
                 $stmt = $this->pdo->prepare($sql);
 
                 $stmt->bindParam(':descricao', $novaDescricao);
                 $stmt->bindParam(':id', $id);
                 $stmt->bindParam(':titulo', $novoTitulo);
+                $stmt->bindParam(':UrlImg', $novaUrlImg);
 
                 $stmt->execute();
 
@@ -111,6 +112,26 @@ class Banco_Dados {
                 $stmt->execute();
 
                 return 'sucess';
+            }else if(!empty(trim($novoTitulo))){
+                $sql = "UPDATE posts SET Titulo = :titulo WHERE id = :id";
+                $stmt = $this->pdo->prepare($sql);
+
+                $stmt->bindParam(':titulo', $novoTitulo);
+                $stmt->bindParam(':id', $id);
+
+                $stmt->execute();
+
+                return 'sucess';   
+            }else if(!empty(trim($novaUrlImg))){
+                $sql = "UPDATE posts SET UrlImg = :urlImg WHERE id = :id";
+                $stmt = $this->pdo->prepare($sql);
+
+                $stmt->bindParam(':urlImg', $novaUrlimg);
+                $stmt->bindParam(':id', $id);
+
+                $stmt->execute();
+
+                return 'sucess';   
             }
         } catch (PDOException $e) {
             return 'error '. $e->getMessage();

@@ -1,5 +1,5 @@
 <?php
-include('Banco_dados.php');
+include('C:\xampp\htdocs\Pages\crud\script\Banco_dados.php');
 
 function processarFormulario() {
     if (isset($_POST['id']) || isset($_GET['id'])) {

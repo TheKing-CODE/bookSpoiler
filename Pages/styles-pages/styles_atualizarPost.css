@@ -1,0 +1,98 @@
+
+.containe-atualizar main{
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin: 0;
+/*	border-style: solid;
+	border-color: yellow;*/
+}
+
+.containe-atualizar form{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	box-sizing: border-box;
+	/*padding: 5px;*/
+	width: 100%;
+	height: auto;
+	background-color: #f9f9f9;
+	
+	/*border-style: solid;*/
+}
+
+.containe-atualizar input[type="text"],  .containe-atualizar textarea {
+  width: 100%;
+  background-color: black; /* Cor de fundo */
+  color: white;
+  padding: 10px;
+  padding-left: 25px;
+  border-style: none;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.containe-atualizar  textarea{
+	resize: none;
+	height: 250px;
+}
+
+.containe-atualizar  label{
+	font-size: 22px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.containe-atualizar  .buttons{		
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 80%;
+	gap: 10px;
+	margin: auto;
+
+}
+
+.containe-atualizar .buttons input[type="button"], .enviar-button{
+		background-color: #ef3353; /* Cor de fundo */
+	    color: white; /* Cor do texto */
+	    border: none; /* Remover borda */
+	    padding: 10px 20px; /* Espaçamento interno */
+	    text-align: center; /* Alinhamento do texto */
+	    text-decoration: none; /* Remover sublinhado */
+	    display: inline-block; /* Exibir como um bloco */
+	    font-size: 18px; /* Tamanho da fonte */
+	    width: 100%;	    
+	    cursor: pointer; /* Cursor ao passar */
+	    border-radius: 20px; /* Raio da borda para arredondar */
+	    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+	    box-shadow: 0px 0px 0px 2px;
+	    /*margin: auto 4px;
+	    margin-top: 10px;	
+	    margin-bottom: 0px;	*/
+	    margin: auto;
+}
+
+
+.containe-atualizar button:hover{
+	background-color: #2b879e;
+}
+
+@media (max-width: 767px){
+	.containe-atualizar  main{
+		justify-content: center;
+		align-content: center;
+		height: 100vh;
+		box-sizing: border-box;
+		padding: 10px;
+	}
+
+	.containe-atualizar  form{
+		height: 100vh;		
+	}
+
+	.containe-atualizar input[type="text"], textarea {
+		width: 90%;
+	}
+
+}
