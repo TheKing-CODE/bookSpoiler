@@ -25,14 +25,14 @@ function mostrarPagInicial(){
     mostrarElemento('entrada-pag');
 }
 
-function carregarPage(url, targetElementId) {
+function carregarPage(url, containeElementId) {
     $.get(url, function(data) {
         // Insere o conteúdo HTML obtido na página
-        $('#' + targetElementId).html('');
-        $('#' + targetElementId).html(data);
+        $('#' + containeElementId).html('');
+        $('#' + containeElementId).html(data);
     })
     .fail(function() {
-        console.error("Erro ao carregar o HTML.");
+        $.notify("Erro ao carregar pag", "error");
     });
 }
 

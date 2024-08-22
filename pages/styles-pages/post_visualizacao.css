@@ -33,7 +33,7 @@
 }
 
  main .descricao{
-	
+	text-align: justify-all;
 	font-family: "Playwrite AR", cursive;
 	font-optical-sizing: auto;
 	font-weight: 500;

@@ -5,8 +5,8 @@ function processarFormulario() {
 	global $arquivoDestino;
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Validação dos campos
-        $titulo = isset($_POST['titulo-post']) ? trim($_POST['titulo-post']) : '';
-        $resumo = isset($_POST['resumo-post']) ? trim($_POST['resumo-post']) : '';
+        $titulo = isset($_POST['titulo-post']) ? ($_POST['titulo-post']) : '';
+        $resumo = isset($_POST['resumo-post']) ? ($_POST['resumo-post']) : '';
         $arquivo = isset($_FILES['file']) ? $_FILES['file'] : null;
 
         // Validar se os campos obrigatórios estão preenchidos

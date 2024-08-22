@@ -4,12 +4,7 @@ $(function(){
 })
 
 function preencherDados(Dados){
-  $('#descricao').text('');
-  const container = document.getElementById('descricao');
-  container.innerHTML = '<p>' + dados.resumo + '</p>';  
 
-  $('#titulo-post').text('');
-  $('#titulo-post').text(Dados.titulo);
 }
 
 function getQueryParams() {
@@ -25,4 +20,3 @@ function parseToHTML(value) {
     const parser = new DOMParser();
     return parser.parseFromString(value, 'text/html');
 }
-

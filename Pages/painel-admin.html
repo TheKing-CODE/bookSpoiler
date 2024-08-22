@@ -30,7 +30,7 @@
 			<ul>
 				<li><i class="fa-solid fa-house" id="icon-pag-inicial"></i><span class="text-pag" id="text-pag-inicial" style="">Página Inicial</span></li>
 				<li><i class="fa-solid fa-newspaper" id="icon-pag-NvPost"></i><span class="text-pag" id="text-NvPost" style="">Novo Post</span></li>
-                <li><i class="fa-solid fa-pen-to-square"></i><span class="text-pag" id="text-perfil" style="">Edita Post</span></li>
+                <li><a href="#ex1" rel="modal:open" style="text-decoration: none; color: aliceblue;"><i class="fa-solid fa-pen-to-square"></i><span class="text-pag" id="text-perfil" style="">Edita Post</span></a></li>
 				<li><a href="#ex1" rel="modal:open" style="text-decoration: none; color: aliceblue;"><i class="fa-solid fa-delete-left"></i><span class="text-pag" id="text-relevantes" style="">Excluir Post</span></a></li>
 			</ul>
 		</aside>
@@ -45,7 +45,7 @@
             </ul>
         </div>
 	<div class="modal" id="ex1" style="">
-	 <div class="containe-excluir" id="ex1">
+	<div class="containe-excluir" id="ex1"><!--  -->
             <style>
                 .containe-excluir{
                     display: grid;
@@ -79,18 +79,32 @@
                 }
             </style>
             <label style="text-align: center; font-size: 22px;">Qual post deseja deleta?</label>
-            <input class="id-post" placeholder="Digite o ID" type="text"/>
+            <input class="id-post" id="id-post" placeholder="Digite o ID" type="text" required />
             <button class="excluir" id="excluir">Excluir</button>
             <a href="#" rel="modal:close" style="text-decoration: none;"><button class="excluir" id="excluir" style="background-color: #ef3353;">Cancelar</button></a>
-        </div>	 			
+        </div>	 	
+
+        <div class="containe-atualizar" id="ex1">
+            <style>
+                .containe-atualizar{
+                    display: grid;
+                    grid-template-columns: auto;
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
+            testando
+        </div>
+
 	</div>
     </main>
     <script src="script_pages/jquery.js"></script>
     <script src="crud/script/criar_post/criar_post.js"></script>
+    <script src="crud/script/delete_post/delete_post.js"></script>
+    <script src="script_pages/atualizar_post.js"></script>
+    <script src="script_pages/notify.js"></script>
  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 	<script src="script_pages/js_painel.js"></script>    
-
-    
 </body>
 </html>
