@@ -7,9 +7,9 @@ class Banco_Dados {
         try {
             $this->pdo = new PDO($dsn, $usuario, $senha);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Conectado com sucesso! <br>";
+            //echo "Conectado com sucesso! <br>";
         } catch (PDOException $e) {
-            echo 'Erro na conexão: ' . $e->getMessage();
+            //echo 'Erro na conexão: ' . $e->getMessage();
         }
     }
 
@@ -51,6 +51,7 @@ class Banco_Dados {
     }
 
     public function ConsultarDados($id = null) {
+        
         try {
             if ($id !== null) {
                 // Preparar a consulta com parâmetros
@@ -62,12 +63,10 @@ class Banco_Dados {
                 $stmt->execute();
 
                 // Recuperar os resultados
-                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                // Iterar sobre os resultados
-                foreach ($resultado as $linha) {
-                    echo $linha['Titulo'] . ' - ' . $linha['Descricao'] . '<br>';
-                }
+                
+                
             } else {
                 $sql = 'SELECT * FROM posts';
                 $stmt = $this->pdo->prepare($sql);
@@ -76,12 +75,10 @@ class Banco_Dados {
                 $stmt->execute();
 
                 // Recuperar os resultados
-                $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                // Iterar sobre os resultados
-                foreach ($resultado as $linha) {
-                    echo $linha['Titulo'] . ' - ' . $linha['Descricao'] . '<br>';
-                }
+                
+               
             }
         } catch (PDOException $e) {
             echo 'Erro: ' . $e->getMessage();
