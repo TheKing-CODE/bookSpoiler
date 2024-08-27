@@ -22,7 +22,6 @@ document.getElementById('form-dados').addEventListener('submit', function(event)
     .then(data => {
         // Trata a resposta do servidor (HTML)
        $.notify("Post criado com sucesso", "success");
-
     })
     .catch(error => {
         // Trata erros de envio

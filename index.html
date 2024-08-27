@@ -21,9 +21,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
-
-
-
 </head>
 <body>
 	<header>
@@ -79,14 +76,17 @@
 		                <div class="dados-post" id="dados-post">
 		                    <h1 id="titulo-post" class="titulo-post" style="">O Hobbit</h1><br />  
 		                    <span class="descricao-post" id="descricao-post" style="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </span><br />
-		                    <a class="link-button" id="link-button"><button id="button-6">Veja mais!</button></a><br />
+		                    <a class="link-button"><button id="button-6">Veja mais!</button></a><br />
 		                    <span class="data-post" id="data-post" style="margin-left: 15px;"><strong>sábado, 27 de julho de 2024</strong></span><br/>
 		                    <a class="link-autor-post" id="link-autor-post">Autor: Lorem Iplsum</a>
+							<span class="id-post-banco" id="id-post-banco" style="display: none;"></span>
 		                </div>
 		            </li>	            		            		            		            		            		
 				</ul>
 			</section>
-		</div>				
+			<button class="mais-post" id="mais-post">Carregar Mais!</button>
+		</div>	
+
 	</main>
 	<footer>
 		<div class="barra-lateral-footer" id="barra-lateral-footer">
@@ -109,13 +109,12 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-	<script src="pages/script_pages/post.js"></script>
-
-	<script src="script/carregar_post.js"></script>
 	<script src="script/script.js"></script>
 	<script src="script/index.js"></script>
 	<script src="script/menu-mobile.js"></script>
 	<script src="script/modal.js"></script>
+	<script src="pages/script_pages/post.js"></script>
+
+	<script src="script/carregar_post.js"></script>
 </body>
 </html>

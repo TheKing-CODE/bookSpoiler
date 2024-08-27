@@ -1,6 +1,4 @@
-$(function(){
-   
-
+$(function(){   
 	$('.campo-buttons .curti-post').click(function(){
 		console.log("Click");
 		Curti_post();
@@ -12,9 +10,7 @@ $(function(){
 
     $('main .button-compartilha').click(function(){        
         preencherDadosNoModal();
-    })
-
-    
+    })        
 })
 
 function Curti_post(){
@@ -65,4 +61,22 @@ function preencherDadosNoModal(){
     
     // Obtém o texto do título    
      $('.modal #titulo-modal').text(titulo);
+}
+
+function preencherDados(Dados){
+  $('main #descricao').text('');
+  const container = document.getElementById('descricao');
+  container.innerHTML = '<p>' + dados.resumo + '</p>';  
+
+  $('main #titulo-post').text('');
+  $('main #titulo-post').text(Dados.titulo);
+}
+
+function getQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  const result = {};
+  for (const [key, value] of params.entries()) {
+    result[key] = value;
+  }
+  return result;
 }

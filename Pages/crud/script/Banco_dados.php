@@ -63,10 +63,7 @@ class Banco_Dados {
                 $stmt->execute();
 
                 // Recuperar os resultados
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                
-                
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);                
             } else {
                 $sql = 'SELECT * FROM posts';
                 $stmt = $this->pdo->prepare($sql);
@@ -75,10 +72,7 @@ class Banco_Dados {
                 $stmt->execute();
 
                 // Recuperar os resultados
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                
-               
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);                           
             }
         } catch (PDOException $e) {
             echo 'Erro: ' . $e->getMessage();

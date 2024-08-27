@@ -4,7 +4,7 @@ $(function(){
 $('section ul li .link-button').click(function(){
      $('#Timeline').hide();
      $('#containe').css('display', 'block');
-	carregarPage('pages/post.html', 'containe');
+	 carregarPage('pages/post.html', 'containe');
 });
 
 
